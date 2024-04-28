@@ -5,4 +5,7 @@ public class Leaf {
 	private int height;
 	private Type type;
 
+  public Leaf(Type type) {
+  }
+
 }
