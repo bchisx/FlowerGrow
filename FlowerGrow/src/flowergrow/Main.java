@@ -1,8 +1,34 @@
 package flowergrow;
-public class Main {
+
+import java.util.Scanner;
+
+class Main {
 	public static void main(String args[]) {
-		/// Successfully cloned the repo - Juzar Antri
-    //We should add a loop here, to keep up the settings menu (its own loop inside the main loop, triggered via button, and to keep up the graphical elements, which may change with an alteration to settings.
-		Petal a=new Petal(Type.DAFFODIL); //This will actually be determined in settings, and the action of setting the Type will not result in a print statment per se (as it presently does), but it will result in a given graphic being applied to the underlying boxes. Our default, for testing, will be a DAFFODIL. 
+		System.out.println("oy, my freedom is defined by growing flowers!!");
+		// Petal a=new Petal(Type.DAFFODIL);
+
+		/// Initially asking user to pick the flower
+		System.out.println("Which Petal you would like to grow?");
+
+		Type[] types = Type.values();
+
+		// Iterate over the array of petal enum constants
+		for (int i = 0; i < types.length; i++) {
+			System.out.println(i + 1 + ". " + types[i]);
+		}
+		System.out.println();
+		Scanner scanner = new Scanner(System.in);
+		/// take the input from user
+		String petalType = scanner.nextLine().toUpperCase();
+
+		// Check if the petal matches any of the enum decleared petals
+		try {
+			Type type = Type.valueOf(petalType);
+			Petal a = new Petal(type);
+		} catch (IllegalArgumentException e) {
+			System.out.println("Invalid input. Please enter one of the flower types.");
+		}
+
+		scanner.close();
 	}
 }

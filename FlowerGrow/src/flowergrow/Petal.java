@@ -8,7 +8,7 @@ public class Petal {
 	public Petal(Type type) {
 		switch(type) {
 	      case TULIP:
-	        System.out.println("is a tulip");
+	        
 	        break;
 	      case POPPY:
 	         System.out.println("is a poppy");
