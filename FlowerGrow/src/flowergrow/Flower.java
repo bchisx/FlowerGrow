@@ -10,7 +10,7 @@ public class Flower {
   private Petal petal;
 
   /// this will represent the parts of flower
-  private Map<String, FlowerPart> parts;
+  //private Map<String, FlowerPart> parts;
 
   public Flower(Type type) {
     switch (type) {
