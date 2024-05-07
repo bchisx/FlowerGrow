@@ -4,19 +4,50 @@ public class Petal {
 	private int length;
 	private int height;
 	private String type;
-	
+
+	Flower flower;
+
 	public Petal(Type type) {
-		switch(type) {
-	      case TULIP:
-	        
-	        break;
-	      case POPPY:
-	         System.out.println("is a poppy");
-	        break;
-	      case DAFFODIL:
-	        System.out.println("is a daffodil");
-	        break;
-	      case SUNFLOWER:
-	    	System.out.println("is a sunflower");    }
+		switch (type) {
+			case TULIP:
+				flower = new Flower(type);
+
+				for (int i = 0; i < 5; i++) {
+					System.out.println("Updating Flower..." + flower.getFlowerType());
+					flower.update();
+					System.out.println();
+				}
+
+				break;
+			case POPPY:
+				flower = new Flower(type);
+
+				for (int i = 0; i < 5; i++) {
+					System.out.println("Updating Flower..." + flower.getFlowerType());
+					flower.update();
+					System.out.println();
+				}
+				break;
+			case DAFFODIL:
+				flower = new Flower(type);
+
+				for (int i = 0; i < 5; i++) {
+					System.out.println("Updating Flower..." + flower.getFlowerType());
+					flower.update();
+					System.out.println();
+				}
+				break;
+			case SUNFLOWER:
+				flower = new Flower(type);
+
+				for (int i = 0; i < 5; i++) {
+					System.out.println("Updating Flower..." + flower.getFlowerType());
+					flower.update();
+					System.out.println();
+				}
+
+				break;
+		}
 	}
+
 }
